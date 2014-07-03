@@ -1,0 +1,3 @@
+cython C code can distributed without cython dependency:
+
+http://stackoverflow.com/questions/4505747/how-should-i-structure-a-python-package-that-contains-cython-code
