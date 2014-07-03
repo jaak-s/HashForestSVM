@@ -1,0 +1,5 @@
+.*~
+.*swp
+.Rhistory
+Data/
+__pycache__/
