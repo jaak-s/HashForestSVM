@@ -1,5 +1,8 @@
 .*~
 .*swp
 .Rhistory
+*.c
+*.so
 Data/
+build/
 __pycache__/
