@@ -12,7 +12,7 @@ cdef class Node:
         self.col = col
         self.cut = cut
     def __str__(self):
-        return "feat=%d @ %1.3f" % (self.col, self.cut)
+        return "feat=%d cut=%1.3f" % (self.col, self.cut)
     
     property left:
         def __get__(self):
