@@ -31,3 +31,24 @@ class KernelPegasos:
         Knew = self.kernel(Xnew)
         return Knew.dot(self.alpha * self.y)
     
+
+class LinearPegasos:
+    def __init__(self, lmbda, T):
+        self.lmbda = lmbda
+        self.T = T
+        
+    def fit(self, X, y):
+        N = X.shape[0]
+        ## linear kernel
+        self.X = X
+        self.y = y
+        self.alpha = np.repeat(0.0, N)
+        for t in range(1, self.T + 1):
+            i = np.random.random_integers(0, N-1)
+            if y[i] / self.lmbda / t * np.sum(self.alpha * y * self.K[:,i]) < 1:
+                self.alpha[i] += 1
+        pass
+    
+    def predict(self, Xnew):
+        Knew = self.kernel(Xnew)
+        return 2*(Knew.dot(self.alpha * self.y) > 0 ) - 1
