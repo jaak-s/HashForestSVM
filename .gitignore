@@ -3,6 +3,7 @@
 .Rhistory
 *.c
 *.so
+*.pyc
 Data/
 build/
 __pycache__/
